@@ -1,82 +1,78 @@
-📌 Fake Review Detection using Machine Learning
+# Fake Product Review Detection
 
-This project detects fake vs genuine product reviews using Machine Learning and Natural Language Processing (NLP).
-The dataset contains Amazon product reviews labeled as fake or genuine, along with ratings and product categories.
+## 📌 Project Overview
+This project detects **fake vs genuine product reviews** using **Natural Language Processing (NLP)** and **Machine Learning (ML)** techniques.  
+By analyzing review text, the model classifies reviews as **fake** or **real**, helping consumers make informed purchasing decisions.
 
-✅ Project Overview
+---
 
-Fake customer reviews can mislead buyers and damage product trust.
-This project builds a text classification model that takes a review as input and predicts whether the review is fake or real.
+## 🧠 Technologies Used
+- **Programming Language:** Python
+- **Libraries:**
+  - pandas, numpy
+  - scikit-learn
+  - textblob
+  - matplotlib, seaborn
+  - wordcloud
+- **Tools:** Jupyter Notebook / Google Colab
 
-The approach involves:
+---
 
-Cleaning and preprocessing review text
+## 📊 Dataset
+The dataset contains Amazon product reviews with the following columns:
 
-Converting text into numerical vectors using TF-IDF
+| Column Name | Description |
+|------------|-------------|
+| `category` | Product category |
+| `rating`   | User-provided rating (1–5) |
+| `label`    | Review label (fake / genuine) |
+| `text_`    | Review text |
 
-Training a Logistic Regression classification model
+---
 
-Evaluating model performance
+## ⚙️ Model Overview
+The project uses **Logistic Regression** to classify reviews. Key steps:
 
-📂 Dataset
-Column Name	Description
-category	Product category (electronics, clothing, etc.)
-rating	User-provided rating
-label	Fake or real review
-text_	The actual review text
+1. **Data Preprocessing:** Clean text, remove nulls.
+2. **Feature Extraction:** Convert text to numerical features using TF-IDF.
+3. **Model Training:** Train Logistic Regression on preprocessed data.
+4. **Evaluation:** Accuracy, Confusion Matrix, Classification Report, ROC-AUC.
 
-Dataset Size: 40,432 reviews
+---
 
-🧠 Model Details
-Step	Description
-Text Cleaning	Remove punctuation, URLs, numbers, lowercase conversion
-Feature Extraction	TF-IDF (max features = 5000)
-Model Used	Logistic Regression
-Evaluation Metrics	Accuracy, Confusion Matrix, Classification Report
-🛠️ Technologies Used
+## 📈 Model Performance (Example)
+Accuracy: ~92%
+Confusion Matrix and Classification Report displayed in notebook.
+ROC-AUC score used for evaluation.
 
-Python
 
-Pandas
+---
 
-NumPy
+## 🚀 How to Run
+1. Clone the repository:
+   
+git clone https://github.com/Indhu375/Fake_Product_Review_Detection.git
 
-Scikit-learn
+2.Navigate to project folder:
 
-Regex (re)
+cd Fake_Product_Review_Detection
 
-Matplotlib / Seaborn (for optional visualization)
 
-🚀 How to Run
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/fake-review-detection.git
-cd fake-review-detection
+3.Install required dependencies:
 
-2️⃣ Install Required Libraries
 pip install -r requirements.txt
 
-3️⃣ Run the Model Notebook/Script
-python fake_review_detection.py
 
+4.Open the notebook:
 
-or open the .ipynb notebook in Jupyter / Colab.
+jupyter notebook notebooks/Fake_Review_Detection.ipynb
 
-📊 Model Evaluation Output (Example)
-Accuracy: 0.92
-Precision, Recall, F1-score shown in classification report.
-Confusion Matrix displayed for actual vs predicted values.
+<img width="441" height="339" alt="image" src="https://github.com/user-attachments/assets/1e560c0c-f64b-482d-88fa-c4655bbd2453" />
 
-📈 Possible Improvements
-Improvement	Description
-Use BERT / DistilBERT	Improve model accuracy with transformer models
-Include more datasets	To generalize model performance
-Deploy as a Web App	Using Flask / FastAPI + Streamlit / React UI
-🤝 Contributions
+🔥 Optional Improvements
 
-Contributions are welcome!
-Feel free to open Issues and Pull Requests.
+Use BERT / DistilBERT for better text classification.
 
-📧 Contact
+Deploy a Streamlit web app for real-time predictions.
 
-Developer: Indhu Sri S
-Email: indhusrishanmugam@gmail.com
+Include more datasets to improve generalization.
